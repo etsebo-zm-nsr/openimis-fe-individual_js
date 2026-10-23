@@ -115,7 +115,6 @@ class IndividualHeadPanel extends FormPanel {
               pubRef="core.DatePicker"
               module="individual"
               label="individual.dob"
-              required
               readOnly={readOnlyFields.includes("dob")}
               onChange={(v) => this.updateAttribute('dob', v)}
               value={individual?.dob}

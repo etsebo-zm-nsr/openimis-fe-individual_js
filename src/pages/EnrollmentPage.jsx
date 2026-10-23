@@ -63,7 +63,7 @@ const mapDispatchToProps = (dispatch) => bindActionCreators({
 // eslint-disable-next-line no-unused-vars
 const mapStateToProps = (state, props) => ({
   rights: state.core?.user?.i_user?.rights ?? [],
-  submittingMutation: state.payroll.submittingMutation,
+  submittingMutation: state.payroll?.submittingMutation,
 });
 
 export { StyledDiv };

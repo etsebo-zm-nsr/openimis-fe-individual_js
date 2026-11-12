@@ -186,7 +186,7 @@ class IndividualForm extends Component {
 
     isMandatoryFieldsEmpty = () => {
         const { individual } = this.state;
-        if (!!individual.firstName && !!individual.lastName && !!individual.dob) {
+        if (!!individual.firstName && !!individual.lastName) {
             return false;
         }
         return true;

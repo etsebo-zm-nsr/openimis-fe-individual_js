@@ -66,8 +66,8 @@ function IndividualAddToGroupPicker(props) {
         options={individuals ?? []}
         isLoading={isLoading}
         value={value}
-        getOptionLabel={(option) => `${option.firstName} ${option.lastName} ${option.dob}`}
-        onChange={(value) => onChange(value, value ? `${value.firstName} ${value.lastName} ${value.dob}` : null)}
+        getOptionLabel={(option) => `${[option.firstName, option.lastName, option.dob].filter(Boolean).join(" ")}`}
+        onChange={(value) => onChange(value, value ? `${[value.firstName, value.lastName, value.dob].filter(Boolean).join(" ")}` : null)}
         setCurrentString={setCurrentString}
         filterOptions={filter}
         filterSelectedOptions={filterSelectedOptions}
@@ -131,8 +131,8 @@ function IndividualAddToGroupPicker(props) {
       options={individuals ?? []}
       isLoading={isLoading}
       value={value}
-      getOptionLabel={(option) => `${option.firstName} ${option.lastName} ${option.dob}`}
-      onChange={(value) => onChange(value, value ? `${value.firstName} ${value.lastName} ${value.dob}` : null)}
+      getOptionLabel={(option) => `${[option.firstName, option.lastName, option.dob].filter(Boolean).join(" ")}`}
+      onChange={(value) => onChange(value, value ? `${[value.firstName, value.lastName, value.dob].filter(Boolean).join(" ")}` : null)}
       setCurrentString={setCurrentString}
       filterOptions={filter}
       filterSelectedOptions={filterSelectedOptions}
